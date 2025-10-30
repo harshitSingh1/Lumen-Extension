@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumen Settings</title>
+    <link href="options.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/icons/icon48.png" alt="Lumen Logo">
+            <h1>Lumen Settings</h1>
+            <p>Customize your accessibility experience</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2><span class="icon">🚫</span> Distraction Blocker</h2>
+                <p>Add websites you want to block to maintain focus. Enter one domain per line (e.g., twitter.com, reddit.com).</p>
+                <div class="form-group">
+                    <label for="blocked-sites">Blocked Websites</label>
+                    <textarea id="blocked-sites" rows="6" placeholder="twitter.com&#10;youtube.com&#10;reddit.com&#10;facebook.com"></textarea>
+                </div>
+                <button id="save-sites">Save Blocked Sites</button>
+            </section>
+
+            <section class="card">
+                <h2><span class="icon">⏱️</span> Pomodoro Timer</h2>
+                <p>Set your preferred work and break intervals for optimal productivity.</p>
+                <div class="form-group-inline">
+                    <label for="pomodoro-work">Work Duration (minutes):</label>
+                    <input type="number" id="pomodoro-work" min="1" max="120" value="25">
+                </div>
+                <div class="form-group-inline">
+                    <label for="pomodoro-break">Break Duration (minutes):</label>
+                    <input type="number" id="pomodoro-break" min="1" max="60" value="5">
+                </div>
+                <button id="save-pomodoro">Save Timer Settings</button>
+            </section>
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

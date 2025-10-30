@@ -1,0 +1,28 @@
+{
+  "missingAlt": [
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div.docs-titlebar-buttons > div.onegoogle-material-minibar > div#gb > div.gb_Dd.gb_0d.gb_yd > div.gb_Re > div.gb_z.gb_dd.gb_Nf.gb_0 > div.gb_D.gb_jb.gb_Nf.gb_0 > a.gb_B.gb_Za.gb_0 > img.gb_P.gbii"
+  ],
+  "lowContrast": [
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-branding-container > a:nth-of-type(1)",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div#docs-titlebar > div.docs-title-outer.docs-title-inline-rename > div#docs-title-widget > div.docs-title-input-label > span#docs-title-input-label-inner",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div.docs-titlebar-buttons > span#docs-titlebar-share-client-button",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div.docs-titlebar-buttons > span#docs-titlebar-share-client-button > div.goog-inline-block.jfk-button.jfk-button-action.scb-split-button.docs-titlebar-button.jfk-button-disabled > span.scb-icon.apps-share-sprite.scb-button-icon.scb-public-s900",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div.docs-titlebar-buttons > div.onegoogle-material-minibar > div#gb > div.gb_Dd.gb_0d.gb_yd > div.gb_Re > div.gb_z.gb_dd.gb_Nf.gb_0 > div.gb_D.gb_jb.gb_Nf.gb_0 > a.gb_B.gb_Za.gb_0",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > span:nth-of-type(1)"
+  ],
+  "missingLabel": [
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div#docs-titlebar > div.docs-title-outer.docs-title-inline-rename > div#docs-title-widget > input.docs-title-input"
+  ],
+  "gunningFog": [],
+  "jargonRatio": [],
+  "inclusiveLanguage": [
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > script:nth-of-type(10)",
+    "[document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > script:nth-of-type(13)"
+  ],
+  "smallTouchTargets": [
+    "Likely too small: [document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-branding-container > a:nth-of-type(1) (short text or in nav/toolbar, no size info)",
+    "Warning: Could not determine size for element: [document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div#docs-titlebar > div.docs-title-outer.docs-title-inline-rename > div#docs-title-widget > input.docs-title-input",
+    "Likely too small: [document]:nth-of-type(1) > html:nth-of-type(1) > body.docs-gm.docsCommonWiz.docs-material.docs-grille-gm3.docs-body-pageless.advancedCJKPositioning > div#docs-chrome > div:nth-of-type(4) > div#docs-header-container > div#docs-header > div#docs-titlebar-container > div.docs-titlebar-buttons > div.onegoogle-material-minibar > div#gb > div.gb_Dd.gb_0d.gb_yd > div.gb_Re > div.gb_z.gb_dd.gb_Nf.gb_0 > div.gb_D.gb_jb.gb_Nf.gb_0 > a.gb_B.gb_Za.gb_0 (short text or in nav/toolbar, no size info)"
+  ],
+  "passiveVoice": []
+}

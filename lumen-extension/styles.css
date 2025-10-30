@@ -1,0 +1,289 @@
+/* WebBridge Accessibility UI System */
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #0ea5e9;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Skip Link */
+.webbridge-skip-link {
+    position: absolute !important;
+    top: -40px !important;
+    left: 6px !important;
+    background: var(--primary) !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    z-index: 10000 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.webbridge-skip-link:focus {
+    top: 6px !important;
+    outline: 2px solid var(--primary-dark) !important;
+    outline-offset: 2px !important;
+}
+
+/* High Contrast Mode */
+.webbridge-high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.webbridge-high-contrast a {
+    color: #ffff00 !important;
+}
+
+.webbridge-high-contrast button {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+/* Enhanced Focus Indicators */
+.webbridge-focus-enhanced:focus {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Button Container */
+.webbridge-btn-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+    background: white;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Common Button Styles */
+.webbridge-tts-button,
+.webbridge-simplify-button,
+.webbridge-summary-button,
+.webbridge-translate-button,
+.webbridge-restore-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+.webbridge-tts-button:hover,
+.webbridge-simplify-button:hover,
+.webbridge-summary-button:hover,
+.webbridge-translate-button:hover,
+.webbridge-restore-button:hover {
+    opacity: 0.9;
+}
+
+/* Specific Button Colors */
+.webbridge-tts-button {
+    background: var(--primary);
+}
+
+.webbridge-simplify-button {
+    background: var(--warning);
+}
+
+.webbridge-summary-button {
+    background: var(--success);
+}
+
+.webbridge-translate-button {
+    background: var(--secondary);
+}
+
+.webbridge-restore-button {
+    background: var(--text-light);
+}
+
+/* Simplified and Translated Text Display */
+.webbridge-simplified,
+.webbridge-translated {
+    background: var(--surface);
+    border-left: 4px solid var(--primary);
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.webbridge-translated {
+    border-left-color: var(--secondary);
+}
+
+/* Summary Display */
+.webbridge-summary {
+    background: var(--surface);
+    border: 1px solid var(--success);
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+.webbridge-summary h4 {
+    margin: 0 0 8px 0;
+    color: var(--success);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Visual Alerts */
+.webbridge-visual-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: var(--text);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.webbridge-visual-alert button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.webbridge-visual-alert button:hover {
+    background: var(--surface);
+}
+
+/* Definition Popup */
+.webbridge-definition-popup {
+    position: absolute;
+    background: white;
+    color: var(--text);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 10000;
+    max-width: 300px;
+    border: 1px solid var(--border);
+}
+
+.webbridge-definition-popup strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.webbridge-definition-popup button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.webbridge-definition-popup button:hover {
+    background: var(--surface);
+}
+
+/* Reading Guide */
+.webbridge-reading-guide {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #f59e0b;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f172a;
+        --surface: #1e293b;
+        --text: #f1f5f9;
+        --text-light: #94a3b8;
+        --border: #334155;
+    }
+    
+    .webbridge-btn-container,
+    .webbridge-visual-alert,
+    .webbridge-definition-popup {
+        background: var(--surface);
+        color: var(--text);
+    }
+    
+    .webbridge-simplified,
+    .webbridge-translated {
+        background: var(--surface);
+    }
+    
+    .webbridge-summary {
+        background: var(--surface);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .webbridge-tts-button,
+    .webbridge-simplify-button,
+    .webbridge-summary-button,
+    .webbridge-translate-button,
+    .webbridge-restore-button,
+    .webbridge-visual-alert,
+    .webbridge-definition-popup {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .webbridge-tts-button,
+    .webbridge-simplify-button,
+    .webbridge-summary-button,
+    .webbridge-translate-button,
+    .webbridge-restore-button {
+        border: 2px solid black;
+    }
+    
+    .webbridge-focus-enhanced:focus {
+        outline: 3px solid black;
+        outline-offset: 2px;
+    }
+}

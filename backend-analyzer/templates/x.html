@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Demo Page</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #e0e0e0; /* Low contrast text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.4; /* Tight line spacing */
+    }
+    header {
+      background-color: #fafafa;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #f0f0f0; /* Low contrast heading */
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #eee;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #bbb; /* Low contrast links */
+      font-size: 14px;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 2px 4px; /* Small touch target */
+    }
+    .container {
+      padding: 40px;
+    }
+    .hero-section {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .hero-section img {
+      width: 100%;
+      height: auto;
+    }
+    .card {
+      background-color: #f9f9f9;
+      margin-top: 30px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .card h2 {
+      color: #888; /* Low contrast heading */
+      margin-top: 0;
+    }
+    form input[type="text"],
+    form input[type="email"] {
+      display: block;
+      width: 300px;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+    .card button {
+      padding: 4px 6px; /* Small touch target */
+      font-size: 12px;
+      margin-top: 15px;
+      background-color: #ddd; /* Low contrast button */
+      color: #eee;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .feature-item {
+      padding: 20px;
+      border: 1px solid #dee2e6;
+    }
+    .feature-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .text-content {
+      margin-top: 20px;
+    }
+    .text-content p {
+      margin-bottom: 15px;
+    }
+    .complex-text {
+      font-size: 14px;
+      line-height: 1.4; /* Tight line spacing */
+    }
+    .flashing-content {
+      animation: flash 1s infinite;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .small-text {
+      font-size: 10px; /* Too small text */
+    }
+    .italic-text {
+      font-style: italic;
+      color: #999; /* Low contrast */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web Accessibility Features Demo</h1>
+    <p class="italic-text">This page demonstrates various accessibility features and improvements</p>
+  </header>
+  
+  <nav>
+    <a href="#main">Main Content</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="container">
+    <div class="hero-section">
+      <!-- Multiple images without alt text -->
+      <img src="{{ url_for('static', filename='download.jpg') }}" class="hero">
+      <img src="{{ url_for('static', filename='download.jpg') }}" class="hero" style="display: none;">
+    </div>
+
+    <div class="card">
+      <h2>Understanding Web Accessibility</h2>
+      <p class="complex-text">
+        Web accessibility encompasses the inclusive practice of ensuring there are no barriers that prevent interaction with, or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic restrictions on bandwidth and speed. When sites are correctly designed, developed and edited, generally all users have equal access to information and functionality.
+      </p>
+      <p class="complex-text">
+        The Web Content Accessibility Guidelines (WCAG) are part of a series of web accessibility guidelines published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. They are a set of recommendations for making Web content more accessible, primarily for people with disabilities—but also for all user agents, including highly limited devices, such as mobile phones.
+      </p>
+      <p class="small-text">
+        This text is intentionally too small to demonstrate text size adjustment features.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <!-- Image without alt text -->
+        <img src="{{ url_for('static', filename='download.jpg') }}">
+        <div class="text-content">
+          <h3>Visual Impairments</h3>
+          <p class="italic-text">This section demonstrates how our extension helps users with visual impairments by providing text-to-speech functionality and high contrast modes.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <!-- Image without alt text -->
+        <img src="{{ url_for('static', filename='download.jpg') }}">
+        <div class="text-content">
+          <h3>Motor Difficulties</h3>
+          <p>Explore how our extension assists users with motor difficulties by providing keyboard navigation and enlarged click targets.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <!-- Image without alt text -->
+        <img src="{{ url_for('static', filename='download.jpg') }}">
+        <div class="text-content">
+          <h3>Cognitive Support</h3>
+          <p>Learn about features that help users with cognitive difficulties, including text simplification and reading guides.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <form>
+        <!-- Form without labels -->
+        <input type="text">
+        <input type="email">
+        <button>Send Message</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Technical Documentation</h2>
+      <p class="complex-text">
+        The implementation of accessibility features requires careful consideration of various technical aspects. This includes proper semantic HTML structure, ARIA attributes where necessary, and ensuring keyboard navigation works correctly. The extension automatically detects and fixes many common accessibility issues, but it's important to understand the underlying principles.
+      </p>
+      <p class="complex-text">
+        When developing web applications, it's crucial to consider the diverse needs of users. This includes those with visual, auditory, motor, and cognitive impairments. Our extension helps identify potential issues and provides solutions to make web content more accessible to everyone.
+      </p>
+      <div class="flashing-content">
+        This content flashes to demonstrate seizure protection features.
+      </div>
+    </div>
+
+    <!-- Hidden content that should be accessible -->
+    <div style="display: none;">
+      <h2>Hidden Section</h2>
+      <p>This content is hidden but should be accessible to screen readers.</p>
+    </div>
+
+    <!-- Content with poor color contrast -->
+    <div class="card" style="background-color: #f0f0f0; color: #e0e0e0;">
+      <h2 style="color: #d0d0d0;">Low Contrast Section</h2>
+      <p>This section demonstrates poor color contrast that needs to be fixed.</p>
+    </div>
+
+    <!-- Content with complex language -->
+    <div class="card">
+      <h2>Complex Language Example</h2>
+      <p class="complex-text">
+        The implementation of accessibility features necessitates a comprehensive understanding of various technical paradigms and methodologies. The intricate interplay between different components requires meticulous attention to detail and a profound comprehension of user interaction patterns. This complexity is further compounded by the need to accommodate diverse user requirements and technological constraints.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Remove any JSON display injected by scripts
+    document.querySelectorAll('pre, code, [class*="json"], [id*="json"]').forEach(el => {
+      if (/^\s*[\{\[]/.test(el.textContent) || el.textContent.includes('":')) {
+        el.remove();
+      }
+    });
+  </script>
+</body>
+</html>

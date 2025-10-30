@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumen</title>
+    <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <img src="assets/icons/icon48.png" alt="Lumen Logo" class="logo">
+            <div class="header-text">
+                <h1>Lumen</h1>
+                <p>AI Accessibility Suite</p>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="tab-visual">Visual</button>
+            <button class="tab-btn" data-tab="tab-focus">Cognitive</button>
+            <button class="tab-btn" data-tab="tab-motor">Motor/Audio</button>
+            <button class="tab-btn" data-tab="tab-ai">AI Tools</button>
+        </nav>
+
+        <main>
+            <!-- Visual Tab -->
+            <div class="tab-panel active" id="tab-visual">
+                <div class="section">
+                    <h2 class="section-title">Font Size</h2>
+                    <div class="font-control">
+                        <button id="btn-font-dec" title="Decrease Font Size">A-</button>
+                        <button id="btn-font-reset" title="Reset Font Size">Reset</button>
+                        <button id="btn-font-inc" title="Increase Font Size">A+</button>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title">Reading Aids</h2>
+                    <div class="toggles">
+                        <div class="control-item" data-setting="lumen-dyslexia">
+                            <label for="toggle-dyslexia" title="Uses OpenDyslexic font">Dyslexia Font</label>
+                            <label class="switch"><input type="checkbox" id="toggle-dyslexia"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item" data-setting="lumen-reading-guide">
+                            <label for="toggle-reading-guide" title="A horizontal bar that follows your mouse">Reading Guide</label>
+                            <label class="switch"><input type="checkbox" id="toggle-reading-guide"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title">Color Filters</h2>
+                    <div class="toggles">
+                        <div class="control-item filter-control" data-setting="lumen-protanopia">
+                            <label for="toggle-protanopia">Protanopia</label>
+                            <label class="switch"><input type="checkbox" id="toggle-protanopia" name="color-filter"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item filter-control" data-setting="lumen-deuteranopia">
+                            <label for="toggle-deuteranopia">Deuteranopia</label>
+                            <label class="switch"><input type="checkbox" id="toggle-deuteranopia" name="color-filter"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item filter-control" data-setting="lumen-tritanopia">
+                            <label for="toggle-tritanopia">Tritanopia</label>
+                            <label class="switch"><input type="checkbox" id="toggle-tritanopia" name="color-filter"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item filter-control" data-setting="lumen-grayscale">
+                            <label for="toggle-grayscale">Grayscale</label>
+                            <label class="switch"><input type="checkbox" id="toggle-grayscale" name="color-filter"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cognitive Tab -->
+            <div class="tab-panel" id="tab-focus">
+                <div class="section">
+                    <h2 class="section-title">Focus Tools</h2>
+                    <div class="toggles">
+                        <div class="control-item" data-setting="lumen-focus-mode">
+                            <label for="toggle-focus-mode" title="Extracts main content into a clean view">Focus Mode (Reader)</label>
+                            <label class="switch"><input type="checkbox" id="toggle-focus-mode"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item" data-setting="lumen-high-contrast">
+                            <label for="toggle-high-contrast" title="Inverts colors for high contrast">High Contrast</label>
+                            <label class="switch"><input type="checkbox" id="toggle-high-contrast"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+                 <div class="section">
+                    <h2 class="section-title">Safety</h2>
+                     <div class="toggles">
+                        <div class="control-item" data-setting="lumen-seizure-protect">
+                            <label for="toggle-seizure-protect" title="Stops all animations, transitions, and GIFs">Seizure Protection</label>
+                            <label class="switch"><input type="checkbox" id="toggle-seizure-protect"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motor/Audio Tab -->
+            <div class="tab-panel" id="tab-motor">
+                <div class="section">
+                    <h2 class="section-title">Motor & Audio</h2>
+                    <div class="toggles">
+                        <div class="control-item" data-setting="lumen-voice-control">
+                            <label for="toggle-voice-control" title="Control the page with voice commands">Voice Control <span id="voice-status"></span></label>
+                            <label class="switch"><input type="checkbox" id="toggle-voice-control"><span class="slider"></span></label>
+                        </div>
+                        <div class="control-item" data-setting="lumen-focus-ring">
+                            <label for="toggle-focus-ring" title="Makes keyboard focus (Tab key) highly visible">Enhanced Focus Ring</label>
+                            <label class="switch"><input type="checkbox" id="toggle-focus-ring"><span class="slider"></span></label>
+                        </div>
+                         <div class="control-item" data-setting="lumen-enlarge-targets">
+                            <label for="toggle-enlarge-targets" title="Makes all links and buttons at least 44x44px">Enlarge Click Targets</label>
+                            <label class="switch"><input type="checkbox" id="toggle-enlarge-targets"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title">Page Utilities</h2>
+                    <button id="btn-skip-link" class="util-btn" title="Adds a 'Skip to Main Content' link at the top of the page">Add Skip-to-Content Link</button>
+                </div>
+            </div>
+
+            <!-- NEW: AI Tools Tab -->
+            <div class="tab-panel" id="tab-ai">
+                <div class="section">
+                    <h2 class="section-title">AI Content Tools</h2>
+                    <div class="ai-controls">
+                        <!-- Translation Feature -->
+                        <div class="ai-control-group">
+                            <h3>Translate Page</h3>
+                            <div class="ai-control">
+                                <label for="ai-target-language">Target Language:</label>
+                                <select id="ai-target-language">
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="Mandarin Chinese">Mandarin Chinese</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="French">French</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="Bengali">Bengali</option>
+                                    <option value="Portuguese">Portuguese</option>
+                                    <option value="Russian">Russian</option>
+                                    <option value="Japanese">Japanese</option>
+                                    <option value="German">German</option>
+                                </select>
+                                <button id="btn-translate-page" class="ai-action-btn">Translate Entire Page</button>
+                            </div>
+                        </div>
+
+                        <!-- Summarization Feature -->
+                        <div class="ai-control-group">
+                            <h3>Summarize Page</h3>
+                            <div class="ai-control">
+                                <label for="ai-summary-length">Summary Length:</label>
+                                <select id="ai-summary-length">
+                                    <option value="short">Short (2-3 Sentences)</option>
+                                    <option value="medium">Medium (1 Paragraph)</option>
+                                    <option value="bullet">Bullet Points</option>
+                                </select>
+                                <button id="btn-summarize-page" class="ai-action-btn">Generate Summary</button>
+                            </div>
+                        </div>
+
+                        <!-- Read Aloud Feature -->
+                        <div class="ai-control-group">
+                            <h3>Read Aloud</h3>
+                            <div class="ai-control">
+                                <label for="ai-tts-voice">Voice Style:</label>
+                                <select id="ai-tts-voice">
+                                    <option value="Kore">Kore (Firm/Clear)</option>
+                                    <option value="Puck">Puck (Upbeat)</option>
+                                    <option value="Zephyr">Zephyr (Bright)</option>
+                                    <option value="Charon">Charon (Informative)</option>
+                                </select>
+                                <button id="btn-read-page" class="ai-action-btn">Read Page Aloud</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button id="btn-settings" title="Open Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Settings</span>
+            </button>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

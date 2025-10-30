@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "Lumen - AI Accessibility Suite",
+  "version": "2.0",
+  "description": "Transforms any webpage for focus, readability, and accessibility using cloud AI and built-in browser APIs.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "tts"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["gemini-api.js", "content.js"],
+      "css": ["assets/css/lumen-inject.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "assets/icons/icon48.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "48": "assets/icons/icon48.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/fonts/*",
+        "assets/css/lumen-inject.css",
+        "onboarding/onboarding.html",
+        "onboarding/onboarding.css",
+        "onboarding/onboarding.js",
+        "popup.css",
+        "options.html",
+        "options.css",
+        "options.js",
+        "blocked.html",
+        "blocked.css",
+        "blocked.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
