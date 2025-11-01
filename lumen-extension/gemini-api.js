@@ -1,7 +1,7 @@
 // --- Gemini API Helper ---
 // This file is injected into the page to handle all Gemini API calls.
 
-const GEMINI_API_KEY = 'YOUR_API_KEY';
+const GEMINI_API_KEY = 'AIzaSyAYHhAfYlgDu7GHFuD1L_5k1K0Ry5SeWGE';
 const GEMINI_TEXT_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
 const GEMINI_VISION_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
 const GEMINI_TTS_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
