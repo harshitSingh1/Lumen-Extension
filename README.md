@@ -3,6 +3,7 @@
 ![Lumen Logo](assets/icons/icon48.png)
 
 **Transform any webpage for focus, readability, and accessibility using AI-powered tools and built-in browser APIs.**
+The internet should be accessible to everyone, yet millions of users face daily barriers online. Whether it's visual impairments, dyslexia, ADHD, language differences, or motor difficulties - traditional web experiences often fail to accommodate diverse needs. We were inspired by the growing need for inclusive technology that doesn't just add accessibility as an afterthought, but builds it into the core experience. Lumen was born from the vision of creating a comprehensive solution that leverages AI to make the web truly accessible for all.
 
 ---
 
